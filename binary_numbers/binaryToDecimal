@@ -1,0 +1,33 @@
+//Converting binary numbers to decimal
+
+#include <iostream>
+#include<cmath>      //required c++ header for maths functions
+using namespace std;
+
+int dec(int n){
+    // Edge case: handle 0 explicitly
+    if (n == 0) return 0; 
+
+    int i = 0;       // place value
+    int rem = 0;     // remainder
+    int result = 0;  // binary result
+    
+    while (n > 0){
+        rem = n % 10;
+        result += rem * pow(2, i);
+        n /= 10;
+        i += 1;
+    }
+    return result;
+}
+
+int main() {
+    int n;
+    cout << "Enter a binary number: ";
+    cin >> n;
+    
+    int decimal = dec(n);
+    cout << "Equivalent decimal number: " << decimal << endl; 
+
+    return 0;
+}
