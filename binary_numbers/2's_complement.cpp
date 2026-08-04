@@ -52,8 +52,9 @@ int main() {
     int n;
     cout<<"Enter a number:";
     cin>>n;
-    cout<<"1's complement"<<ones(n)<<endl;
-    cout<<"2's complement"<<twos(n);
+    cout<<"Binary equivalent: "<<bin(n)<<endl;
+    cout<<"1's complement: "<<ones(n)<<endl;
+    cout<<"2's complement: "<<twos(n);
     
     return 0;
 }
