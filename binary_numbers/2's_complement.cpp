@@ -3,7 +3,24 @@
 #include <iostream>
 using namespace std;
 
+int bin(int n){
+    if (n == 0) return 0; 
+
+    int i = 1;       // place value
+    int rem = 0;     // remainder
+    int result = 0;  // binary result
+    
+    while (n > 0){
+        rem = n % 2;
+        result += rem * i;
+        n /= 2;
+        i *= 10;
+    }
+    return result;
+}
+
 int ones(int n){
+    n=bin(n);
     int i=1;
     int result=0;
     int temp;
