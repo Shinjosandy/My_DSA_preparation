@@ -1,4 +1,4 @@
-//Maximum subarray sum
+//Maximum subarray sum with O(n^2) time complexity 
 #include <iostream>
 #include <vector>
 #include <limits.h>
