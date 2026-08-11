@@ -16,7 +16,7 @@ int main(){
         }
     }
     
-    cout<<max_sum;
+    cout<<"Maximum subarray sum: "<<max_sum;
     
     return 0;
 }
@@ -24,5 +24,5 @@ int main(){
 /* 
 Output:
 
-15
+Maximum subarray sum: 15
 */
