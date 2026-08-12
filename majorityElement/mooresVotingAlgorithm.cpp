@@ -35,8 +35,22 @@ int main(){
     }
     
     // 'ans' is the final candidate after cancelling different elements.
-    
-    cout<<"Majority Element: "<<ans;
+
+    // Count the actual occurrences of the candidate
+    // to verify whether it is a true majority element.    
+    int count = 0;
+
+    for (int i : nums) {
+        if (i == ans) {
+            count++;
+        }
+    }
+
+    // A majority element must appear more than n/2 times.
+    if (count > nums.size() / 2)
+        cout << ans;
+    else
+        cout << -1;
 
     return 0;
 }
